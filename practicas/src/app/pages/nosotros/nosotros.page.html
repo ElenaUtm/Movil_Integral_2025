@@ -1,0 +1,28 @@
+<!--Incrustamos el componente header-->
+<app-header>
+    <ion-toolbar>
+        <ion-title>Buscar Personajes</ion-title>
+    </ion-toolbar>
+</app-header>
+
+<ion-toolbar>
+    <ion-searchbar 
+        placeholder="Buscar Personaje"
+        animated
+        debounce="700"
+        [value]="textoBuscar"
+        (ionChange)="buscar($event)"
+    >
+    </ion-searchbar>
+</ion-toolbar>
+
+
+<ion-content [fullscreen]="true">
+ <ion-card>
+    <img  style="height: 30vh; width: 60vh" >
+    <ion-card-header>
+      <ion-card-title>Apellido</ion-card-title>
+      <ion-card-subtitle>Nombre</ion-card-subtitle>
+    </ion-card-header>    
+  </ion-card>
+</ion-content>
